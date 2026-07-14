@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+}
+body {
+    background-color: #000a1b;
+    color: #9fffcf;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+h1 {
+    font-size: 39px;
+    margin-bottom: 10px;
+
+    background: linear-gradient(90deg, #5349e0, #2ab669);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.instructions {
+    font-size: 25px;
+    margin-bottom: 15px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center; 
+}
+#passwordInput {
+    align-items: center;
+    padding: 10px;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+#toggleButton {
+    padding: 10px 10px;
+    font-size: 15px;
+    cursor: pointer;
+    background-color: #2ab669;
+    color: #060544;
+    border: none;
+    border-radius: 5px;
+    align-items: auto;
+}
+.strength-meter {
+    width: 100%;
+    height: 10px;
+    background-color: #b6fcf2;
+    border-radius: 5px;
+    margin-bottom: 30px
+    
+}
+
+.strength-bar{
+    width:100%;
+    height:12px;
+    background:#fdfafa4f;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.strength-fill{
+    width:0%;
+    height:100%;
+    background:red;
+    border-radius:20px;
+    transition:width 0.4s ease;
+}
+.strength-text {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+#strengthText {
+    font-size: 40px;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+.info {
+    font-size: 15px;
+    margin-top: 28px;
+    display: flex;
+    flex-direction: column;
+    color: #76b6ff60;
+}
+.requirements{
+    margin-top:20px;
+    margin-bottom:20px;
+}
+
+.requirements p{
+    margin:0% 0;
+    font-size:15px;
+    color:#a5ccf8da;
+}

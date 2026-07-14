@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check and Analyze Password</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🛡️ Password Strength Analyzer 🛡️</h1>
+        <p class="instructions">Check the strength of your password:</p>
+        <input type="password" id="passwordInput" placeholder="Enter your password">
+        <button id="toggleButton">show</button>
+        <div class="requirements">
+            <p id="lengthCheck">At least 8 characters ❌</p>
+            <p id="uppercaseCheck">Contains uppercase letter ❌</p>
+            <p id="lowercaseCheck">Contains lowercase letter ❌</p>
+            <p id="numberCheck">Includes a number ❌</p>
+            <p id="specialCheck">Has a special character ❌</p>
+        </div>
+
+        <div class="strength-meter">
+            <div class="strength-bar">
+                <div class="strength-fill"> 
+
+                </div>
+            </div>
+            <br>
+            <p id="strengthText">Strength: none </p>
+        </div> 
+        <br>
+        <div class="info">
+            <h3>Estimated Crack Time</h3>
+
+            <p id="crack-time">
+                —
+            </p>
+
+        </div>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
