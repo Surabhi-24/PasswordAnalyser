@@ -1,65 +1,109 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 20px;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
-body {
-    background-color: #000a1b;
-    color: #9fffcf;
-    line-height: 1.6;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-h1 {
-    font-size: 39px;
-    margin-bottom: 10px;
 
-    background: linear-gradient(90deg, #5349e0, #2ab669);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+body{
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background:#07111f;
+    color:#e2e8f0;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    min-height:100vh;
+    padding:20px;
 }
-.instructions {
-    font-size: 25px;
-    margin-bottom: 15px;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    text-align: center; 
+
+/* Main Card */
+.container{
+    width:100%;
+    max-width:520px;
+    background:#0f172a;
+    padding:35px;
+    border-radius:18px;
+    box-shadow:
+        0 0 20px rgba(42,182,105,.15),
+        0 10px 40px rgba(0,0,0,.5);
 }
-#passwordInput {
-    align-items: center;
-    padding: 10px;
-    font-size: 15px;
-    margin-bottom: 20px;
+
+h1{
+    text-align:center;
+    font-size:2rem;
+    margin-bottom:10px;
+
+    background:linear-gradient(90deg,#5349e0,#2ab669);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    background-clip:text;
 }
-#toggleButton {
-    padding: 10px 10px;
-    font-size: 15px;
-    cursor: pointer;
-    background-color: #2ab669;
-    color: #060544;
-    border: none;
-    border-radius: 5px;
-    align-items: auto;
+
+.instructions{
+    text-align:center;
+    color:#94a3b8;
+    margin-bottom:25px;
+    font-size:1rem;
 }
-.strength-meter {
-    width: 100%;
-    height: 10px;
-    background-color: #b6fcf2;
-    border-radius: 5px;
-    margin-bottom: 30px
-    
+.password-box{
+    display:flex;
+    gap:10px;
+    margin-bottom:20px;
+}
+
+#passwordInput{
+    flex:1;
+    padding:14px;
+    border:none;
+    outline:none;
+    border-radius:10px;
+    background:#1e293b;
+    color:white;
+
+    font-size:16px;
+}
+
+#passwordInput::placeholder{
+    color:#94a3b8;
+}
+
+/* Button */
+#toggleButton{
+    padding:14px 18px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    background:#2ab669;
+    color:#061324;
+    font-weight:bold;
+    transition:.3s;
+}
+
+#toggleButton:hover{
+    background:#33d17a;
+    transform:translateY(-2px);
+}
+
+/* Requirements */
+.requirements{
+    margin:20px 0;
+}
+
+.requirements p{
+    margin:8px 0;
+    font-size:15px;
+}
+
+/* Strength Meter */
+.strength-meter{
+    margin-top:20px;
 }
 
 .strength-bar{
     width:100%;
-    height:12px;
-    background:#fdfafa4f;
+    height:14px;
+    background:#334155;
     border-radius:20px;
     overflow:hidden;
 }
@@ -67,33 +111,41 @@ h1 {
 .strength-fill{
     width:0%;
     height:100%;
-    background:red;
+    background:#ef4444;
+    transition:all .4s ease;
     border-radius:20px;
-    transition:width 0.4s ease;
-}
-.strength-text {
-    font-size: 20px;
-    margin-bottom: 20px;
-}
-#strengthText {
-    font-size: 40px;
-    margin-bottom: 25px;
-    font-weight: bold;
-}
-.info {
-    font-size: 15px;
-    margin-top: 28px;
-    display: flex;
-    flex-direction: column;
-    color: #76b6ff60;
-}
-.requirements{
-    margin-top:20px;
-    margin-bottom:20px;
 }
 
-.requirements p{
-    margin:0% 0;
-    font-size:15px;
-    color:#a5ccf8da;
+#strengthText{
+    margin-top:12px;
+    text-align:center;
+    font-size:18px;
+    font-weight:bold;
+}
+.info{
+    margin-top:25px;
+}
+
+.info h3{
+    color:#60a5fa;
+    margin-bottom:10px;
+}
+
+.info ul{
+    padding-left:20px;
+}
+
+.info li{
+    margin-bottom:8px;
+}
+
+#crack-time{
+    font-size:17px;
+    color:#f8fafc;
+}
+.footer{
+    margin-top:30px;
+    text-align:center;
+    color:#64748b;
+    font-size:13px;
 }

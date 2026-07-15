@@ -3,42 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Check and Analyze Password</title>
+    <title>Password Strength Analyzer</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>🛡️ Password Strength Analyzer 🛡️</h1>
-        <p class="instructions">Check the strength of your password:</p>
-        <input type="password" id="passwordInput" placeholder="Enter your password">
-        <button id="toggleButton">show</button>
-        <div class="requirements">
-            <p id="lengthCheck">At least 8 characters ❌</p>
-            <p id="uppercaseCheck">Contains uppercase letter ❌</p>
-            <p id="lowercaseCheck">Contains lowercase letter ❌</p>
-            <p id="numberCheck">Includes a number ❌</p>
-            <p id="specialCheck">Has a special character ❌</p>
+
+    <main class="container">
+
+        <h1>🛡️ Password Strength Analyzer</h1>
+
+        <p class="instructions">
+            Check how secure your password is in real time.
+        </p>
+
+        <!-- Password Input -->
+        <div class="password-box">
+
+            <input
+                type="password"
+                id="passwordInput"
+                placeholder="Enter your password">
+
+            <button id="toggleButton">
+                👁 Show
+            </button>
+
         </div>
 
+        <!-- Password Requirements -->
+        <div class="requirements">
+
+            <p id="lengthCheck">❌ At least 8 characters</p>
+
+            <p id="uppercaseCheck">❌ Uppercase letter</p>
+
+            <p id="lowercaseCheck">❌ Lowercase letter</p>
+
+            <p id="numberCheck">❌ Number</p>
+
+            <p id="specialCheck">❌ Special character</p>
+
+        </div>
+
+        <!-- Strength Meter -->
         <div class="strength-meter">
+
             <div class="strength-bar">
-                <div class="strength-fill"> 
-
-                </div>
+                <div class="strength-fill"></div>
             </div>
-            <br>
-            <p id="strengthText">Strength: none </p>
-        </div> 
-        <br>
-        <div class="info">
-            <h3>Estimated Crack Time</h3>
 
-            <p id="crack-time">
-                —
+            <p id="strengthText">
+                Strength: None
             </p>
 
         </div>
-    </div>
-<script src="script.js"></script>
+
+        <div class="info">
+
+            <h3>💡 Suggestions</h3>
+
+            <ul id="suggestions">
+                <li>Start typing a password...</li>
+            </ul>
+
+        </div>
+
+        <!-- Crack Time -->
+        <div class="info">
+
+            <h3>⏳ Estimated Crack Time</h3>
+
+            <p id="crack-time">
+                ⌛ —
+            </p>
+
+        </div>
+
+        <footer class="footer">
+            <p>🔐 Built using HTML, CSS & JavaScript</p>
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+
 </body>
 </html>
